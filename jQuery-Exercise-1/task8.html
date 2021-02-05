@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery cdn -->
+</head>
+
+<body>
+    <div>
+        <p> jQuery Exercise prectis , <em title="Real life jQuery or all."> Solution</em></p>
+        <p id="tital"></p>
+
+        <button id="button1"> see effect</button>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#button1').click(function () {
+                let title = $("em").attr("title");
+                $("#tital").text(title);
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  <!-- jQuery cdn -->
+</head>
+<body>
+    <div>
+        <p>helo</p>
+    </div>
+    <a href=""> Top </a>
+    <script>
+        for(let i=1 ; i<30 ;i++ ){
+        $("p").last().after("<p>After</p>");
+        }
+
+        $("a").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery cdn -->
+
+    <style>
+        div {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            float: left;
+            border: 2px solid green;
+        }
+
+        .red {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <button id="button1">Click to see the effect</button>
+
+    <script>
+        $('#button1').click(function () {
+            $("body").find("div").eq(3).toggleClass("red");
+        });
+    </script>
+</body>
+
+</html>

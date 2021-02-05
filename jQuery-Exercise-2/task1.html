@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery cdn -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="mainInputDiv" class="container  p-3">
+            <div class="row">
+                <div class="col-3">
+                    <input id="mainName" type="text" placeholder="name" />
+                </div>
+                <div class="col-3">
+                    <input id="mainLast" type="text" placeholder="last name" />
+                </div>
+                <div class="col-2">
+                    <input type="text" id="bgcolor" placeholder="background color">
+                </div>
+                <div class="col-2">
+                    <select  id="textS" class="">
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                    </select>
+                </div>
+                <div class="col-2" id="chang_btn">
+                    <button onclick="addNameRow()" class="btn btn-outline-primary">add</button>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-4">
+                    <input type="checkbox" onchange="toggleAll(this)"/>
+                    <span>Select all</span>
+                </div>
+                <div class="col-4">
+                    <p id="Total_selected"> Total 0 selected row</p>
+                </div>
+                <div class="col-4">
+                    <button class="btn-danger" onclick="deletAll() "> Delet </button>
+                </div>
+            </div>
+
+            <table id="tableData">
+
+            </table>
+
+            <div id="edit_property" class="mt-4">
+                <div class="row">
+                    <div class="col-4">
+                        <input class="" type="text" id="changeBack" placeholder="Name of Color"/>
+                    </div>
+
+                    <div class="col-4" >
+                        <select id="change_text_size" class="">
+                            <option value="small">small</option>
+                            <option value="medium">medium</option>
+                            <option value="large">large</option>
+                       </select>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-warning" onclick="apply_changes()"><b>Apply</b></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./task1.js"></script>
+
+</body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery cdn -->
+
+    <style>
+        #iddiv {
+            background-color: aquamarine;
+
+        }
+
+        .after{
+            border:2px solid blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <h1 id="output"> </h1>
+        <div id="iddiv">
+            <span>This is a span</span>
+            <p>This is a Paragraph</p>
+            <button id="button1">Click to see the effect</button>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function () {
+            $('#button1').click(function () {
+                $('#iddiv *').addClass('after')
+                $('#output').text(`${$('#iddiv *').length} element(s) found`)
+            })
+        })
+    </script>
+
+</html>

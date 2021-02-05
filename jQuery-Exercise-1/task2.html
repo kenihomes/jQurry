@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  <!-- jQuery cdn -->
+</head>
+
+<body>
+    <div>
+        <p>kishan desai</p>
+        <p>rajiv dixit</p>
+        <p>raju lalakiya</p>
+        <p>table tennis</p>
+    </div>
+    <script>
+        for (let i = 1; i < 30; i++) {
+            $("p").last().after("<p>heloo heloo</p>");
+        }
+
+        $('p').each(function () {
+            var pdata = $(this);
+            pdata.html(pdata.text().replace(/(^\w+)/, '<strong>$1</strong>'));
+        }); 
+    </script>
+</body>
+
+</html>

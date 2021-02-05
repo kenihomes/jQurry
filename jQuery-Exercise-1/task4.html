@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery cdn -->
+
+    <style>
+        p{
+            margin: 8px;
+            font-size: 16px;
+        }
+
+        .rapid_font_color {
+            color: blue;
+        }
+
+        .rapid_background {
+            background: orange;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>PHP</p>
+    <p>Java</p>
+    <p>Python</p>
+
+    <script>
+        $(document).ready(function(){
+        $('p').last().addClass("rapid_font_color rapid_background ");
+        })
+    </script>
+</body>
+
+</html>

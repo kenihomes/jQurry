@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery cdn -->
+
+    <style>
+        div {
+            background: #B0E0E6;
+            border: 1px solid #e30ae8;
+            width: 20px;
+            height: 30px;
+            margin: 0 5px;
+            float: left;
+        }
+
+        .colored {
+            background: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <button id="button1">Click to see the effect</button>   
+
+    </body>
+
+    <script>
+        $(document).ready(function() {
+
+            $('#button1').click(function() {
+                $('div:animated').toggleClass("colored");
+                console.log("heloow")
+            })
+        
+            function animatdiv(){
+            $('#div1,#div2').slideToggle(3000,animatdiv);}
+            
+            animatdiv();
+        })
+    </script>
+
+</html>
